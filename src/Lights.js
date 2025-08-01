@@ -67,6 +67,8 @@ export default class Lights
         directionalLight.shadow.camera.bottom = - 14
         directionalLight.position.set(- 15, 10, 0)
         directionalLight.shadow.mapType = THREE.PCFShadowMap
+        directionalLight.shadow.normalBias = 0.0027 //fix  the weird multi shadow lines (shadow on self)
+        directionalLight.shadow.bias = -0.004 //fix  the weird multi shadow lines (shadow on self)
 
         scene.add(directionalLight)
 
